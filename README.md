@@ -1,72 +1,74 @@
-# 🚀 Sistema de Feedback com Cálculo de NPS
+# 🚀 Sistema de Feedback com NPS
 
-<!-- Use um GIF local: coloque o arquivo `starwars.gif` na pasta `static/` do repositório -->
 <p align="center">
-  <img alt="Star Wars" src="./static/starwars.gif" width="480"/>
+  <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Star Wars" width="480"/>
 </p>
 
-## 📌 Descrição
-Este projeto é um sistema de coleta de feedback com cálculo automático de **NPS (Net Promoter Score)**.  
-O administrador pode visualizar:
-- 📅 Data e hora de cada feedback
-- ⭐ Nota atribuída pelo usuário
-- 💬 Comentário
-- 📊 Percentual do NPS em tempo real
+---
 
-## 🔧 Por que o GIF pode não carregar?
-Alguns motivos comuns:
-- O link externo (ex.: Giphy) foi bloqueado ou não é o link direto do GIF.
-- O README está local e o navegador não tem acesso à internet.
-- Alguns hosts não permitem hotlinking (uso direto do arquivo).
-- O caminho no README está incorreto (use caminhos relativos quando o GIF estiver no repositório).
+## 🔧 Tecnologias Utilizadas
 
-## ✅ Correção recomendada (melhor prática)
-1. Crie a pasta `static/` na raiz do seu repositório (se ainda não existir).
-2. Faça upload do GIF `starwars.gif` para `static/`.
-3. No `README.md`, use caminho relativo para garantir que o GIF seja exibido no GitHub:
-```markdown
-![Star Wars](./static/starwars.gif)
-```
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="40" height="40"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" width="40" height="40"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" width="40" height="40"/>
+</p>
 
-### Como subir o GIF no GitHub (via Web UI)
-1. Abra seu repositório no GitHub.
-2. Clique em **Add file → Upload files**.
-3. Arraste o `starwars.gif` para a área de upload dentro de `/static/` (crie a pasta `static` se necessário).
-4. Commit das mudanças (escreva uma mensagem e clique em "Commit changes").
+---
 
-### Como subir o GIF via Git (CLI)
+## 📌 Sobre o Projeto
+
+Este é um sistema simples para coleta de feedback com cálculo automático do **NPS** (Net Promoter Score), feito com Python e Flask, armazenando dados em SQLite.
+
+---
+
+## 🚀 Como rodar o projeto
+
 ```bash
-# dentro da pasta do projeto
-mkdir -p static
-cp /caminho/para/starwars.gif static/
-git add static/starwars.gif
-git commit -m "Adiciona starwars.gif para README"
-git push origin main
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\\Scripts\\activate   # Windows
+pip install -r requirements.txt
+python app.py
 ```
 
-Depois de subir, o GitHub mostrará o GIF no README usando o caminho relativo.
+---
 
-## 📁 Estrutura recomendada
+## 📊 Funcionalidades
+
+- Formulário para envio de feedback (nota 0-10, comentário e nome opcional)
+- Dashboard protegido por login para visualizar:
+  - NPS em tempo real
+  - Lista de feedbacks com data, hora, nota e comentário
+
+---
+
+## 📂 Estrutura do projeto
+
 ```
 feedback-nps/
 ├── app.py
 ├── feedback.db
 ├── requirements.txt
 ├── templates/
+│   ├── feedback.html
+│   ├── login.html
+│   └── dashboard.html
 ├── static/
-│   └── starwars.gif   <-- coloque o GIF aqui
+│   └── style.css
 └── README.md
 ```
 
 ---
 
-## 🖼️ Quer que eu crie um GIF simples pra você?
-Posso gerar um GIF curto estilo "Star Wars crawl" (texto rolando) e te disponibilizar para download aqui, para você só fazer upload no `static/`.  
-Quer que eu gere esse GIF agora e te mande o link para baixar? (responda "sim" ou "não")
+## 👨‍💻 Autor
+
+Pedro Lucas Vergueiro
 
 ---
 
-**Se preferir, eu também posso:**
-- te ajudar a pegar um GIF público do Giphy/Imgur com o link direto correto;
-- ou atualizar o README com uma alternativa (GIF externo confiável ou imagem estática).
-
+✨ *Que a Força esteja com você!* ✨

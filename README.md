@@ -1,7 +1,7 @@
 # 🚀 Sistema de Feedback com NPS
 
 <p align="center">
-  <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Star Wars" width="480"/>
+  <img src="https://media.giphy.com/media/ETjjp8skvlTGM/giphy.gif" alt="Star Wars" width="480"/>
 </p>
 
 ---

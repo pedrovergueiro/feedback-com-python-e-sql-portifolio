@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard NPS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container dashboard-container">
+        <h1>Dashboard de Feedbacks e NPS</h1>
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+
+        <section class="stats">
+            <p><strong>Total de Feedbacks:</strong> {{ feedbacks|length }}</p>
+            <p><strong>Média das Notas:</strong> {{ media }}</p>
+            <p><strong>Promotores (9-10):</strong> {{ promotores }}</p>
+            <p><strong>Neutros (7-8):</strong> {{ neutros }}</p>
+            <p><strong>Detratores (0-6):</strong> {{ detratores }}</p>
+            <p><strong>NPS:</strong> {{ nps }}%</p>
+        </section>
+
+        <section class="feedback-list">
+            <h2>Feedbacks Recentes</h2>
+            {% if feedbacks %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nota</th>
+                            <th>Comentário</th>
+                            <th>Data e Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for f in feedbacks %}
+                        <tr>
+                            <td>{{ f[0] or 'Anônimo' }}</td>
+                            <td>{{ f[1] }}</td>
+                            <td>{{ f[2] or '' }}</td>
+                            <td>{{ f[3] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>Nenhum feedback registrado ainda.</p>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>
